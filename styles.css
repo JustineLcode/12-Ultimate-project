@@ -124,26 +124,49 @@ a {
 }
 .ipsumnestedgrid{
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 2;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 .loremipsumsiamet{
     grid-column: 1/4;
     grid-row: 1/2;
-}
-
-.loremipsumsiamet{
     text-align: center;
     justify-content: center;
 }
-
-
-
-
-
-
-
 .blocimages{
-grid-template-columns: 1/4;
-grid-row: 2/3;
+    display: grid;
+    gap: 20px;
+    grid-column: 1/4;
 }
+.bloc1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.bloc2{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.bloc3{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.h4bloc{
+    font-family: "Barlow Condensed";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.bloc1, .bloc2, .bloc3 {
+    background: linear-gradient(180deg, #4D4F95 0%, #2B2D66 100%);
+    border-radius: 15px;
+    padding-bottom: 15px;
+}
+.txt{
+    padding: 20px;
+}
+
+/* ---------------------------------------------------------------------FOOTER------------------------------------------------------------------- */
+
