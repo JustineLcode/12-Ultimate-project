@@ -111,6 +111,8 @@ a {
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
+    color: #FFFFFF;
+
 }
 .plorem{
     font-size: 16px;
@@ -170,3 +172,41 @@ a {
 
 /* ---------------------------------------------------------------------FOOTER------------------------------------------------------------------- */
 
+.footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+.menu a, .service a{
+    color: #FFF;
+}
+.divlogo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.menu{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.service{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.social{
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+/* .social img{
+    width: 20px;
+    height: 20px;
+} */
+.copyright{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copyright a{
+    color: #FFF;
+}
