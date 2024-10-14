@@ -10,6 +10,7 @@ body{
     background-image: linear-gradient(236.56deg, #2C2D65 0.35%, #201F22 100%);
     background-repeat: no-repeat;
 }
+@media (min-width:1024px){
 .container{
     max-width: 1200px;
     padding: 0 10px;
@@ -85,6 +86,7 @@ a {
     z-index: -1;
     top: -45px;
     left: -45px;
+    animation: loader 5s linear infinite;
     }
     @keyframes carre {
     from { transform: scale(0.8); }
@@ -178,10 +180,8 @@ a {
     40% {
 		transform: perspective(400px) translateZ(150px) rotateY(170deg);
 		animation-timing-function: ease-in-out;
-	50% {
-		transform: perspective(400px) }
     }
-}
+    }
 .h6lorem{
     font-size: 16px;
     font-weight: 400;
@@ -230,7 +230,7 @@ a {
     height: 153px;
     left: 480px;
     top: 1340px;
-    animation: loader 5s ease-in-out infinite;
+    animation: loader 5s linear infinite;
 }
 @keyframes loader {
     from { transform: rotate(0deg); }
@@ -325,7 +325,12 @@ a {
     gap: 5px;
     width: 30px;
     height: 30px;
-    border-radius: 50%
+    border-radius: 50%;
+    position: relative; 
+    background-image: url('Oval.jpg'), url('facebook.png');
+    background-position: center, center;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
 }
 .ligne{
     grid-column: 1/5;
@@ -348,4 +353,8 @@ a {
 }
 .terms{
     margin-right: 40px;
+}
+}
+@media screen {
+    
 }
