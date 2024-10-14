@@ -33,6 +33,18 @@ a {
     align-items: center;
     padding-bottom: 100px;
 }
+.header::after{
+    content: "";
+    position: absolute;
+    background-image: url(deco1.png);
+    background-size: cover;
+    width: 730px;
+    height: 747px;
+    z-index: -1;
+    overflow: hidden;
+    top: -110px;
+    right: -100px
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -61,7 +73,31 @@ a {
 .awesome {
     grid-column: 1/2;
     grid-row: 1/2;
+    position: relative;
 }
+.awesome::before{
+    content: "";
+    position: absolute;
+    background-image: url(deco3\ 1.png);
+    background-size: cover;
+    width: 142px;
+    height: 153px;
+    z-index: -1;
+    top: -45px;
+    left: -45px
+    }
+    .awesome::after{
+        content: "";
+        position: absolute;
+        background-image: url(deco2.png);
+        background-size: cover;
+        width: 184px;
+        height: 181px;
+        z-index: -1;
+        left: 307px;
+        top: 195px;
+        }
+
 .h1awesome{
     font-weight: 300;
     font-size: 64px;
@@ -86,6 +122,7 @@ a {
     letter-spacing: 0.045em;
     color: #EFEFEF;
     padding-bottom: 40px;
+    width: 70%;
 }
 .buttons a{
     border-radius: 30px;
@@ -110,7 +147,18 @@ a {
 }
 .lorem{
     grid-template-columns: 2/3;
-    grid-row: 2/3;;
+    grid-row: 2/3;
+    width: 80%;
+}
+.lorem::before{
+    content: "";
+    background-image: url(Ellipse\ 1.png);
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    z-index:-1;
+    right: 320px;
+    top: 715px;
 }
 .h6lorem{
     font-size: 16px;
@@ -141,6 +189,7 @@ a {
     line-height: 32px;
     color: #FFFFFF80;
     margin-bottom: 20px;
+    /* width: 80%; */
 }
 .btn3{
     background-color: #E6606C;
@@ -149,6 +198,16 @@ a {
 .ipsum{
     grid-column: 1/3;
     grid-row: 3/4;
+}
+.ipsum::before{
+    content: "";
+    position: absolute;
+    background-image: url(deco3\ 1.png);
+    z-index: -1;
+    width: 142px;
+    height: 153px;
+    left: 650px;
+    top: 1300px;
 }
 .ipsumnestedgrid{
     display: grid;
@@ -161,7 +220,13 @@ a {
     grid-row: 1/2;
     text-align: center;
     justify-content: center;
+    display: grid;
 }
+.ipsum .ipsumnestedgrid .loremipsumsiamet p{
+    width: 45%;
+    margin-left: 325px;
+    color:#FFFFFF80;
+} 
 .blocimages{
     display: grid;
     gap: 20px;
@@ -229,17 +294,8 @@ a {
     gap: 5px;
     width: 30px;
     height: 30px;
-
+    border-radius: 50%
 }
-/* .footer-social {
-    display: flex;
-    gap: 5px;
-    align-self: flex-end;
-  }
-  
-  .footer-social img {
-    width: 20px;
-  } */
 .ligne{
     grid-column: 1/5;
     grid-row: 2/3;
