@@ -43,7 +43,7 @@ a {
     z-index: -1;
     overflow: hidden;
     top: -110px;
-    right: -100px
+    right: -130px
 }
 .navbar{
     display: flex;
@@ -84,7 +84,11 @@ a {
     height: 153px;
     z-index: -1;
     top: -45px;
-    left: -45px
+    left: -45px;
+    }
+    @keyframes carre {
+    from { transform: scale(0.8); }
+        to { transform: scale(1.2); }
     }
     .awesome::after{
         content: "";
@@ -96,6 +100,7 @@ a {
         z-index: -1;
         left: 307px;
         top: 195px;
+        animation: carre 3s infinite ease-in-out alternate;
         }
 
 .h1awesome{
@@ -140,7 +145,11 @@ a {
     background-color: #EFEFEF;
     color: #000;
     }
-
+.btn1:hover , .btn2:hover{
+    transition: 0.5s ease;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
 .photo42{
     grid-column: 1/2;
     grid-row: 2/3;
@@ -159,6 +168,19 @@ a {
     z-index:-1;
     right: 320px;
     top: 715px;
+    backface-visibility: visible;
+	animation: ellipse 3s ease-in-out infinite alternate;
+}
+@keyframes ellipse{
+	0% {
+		transform: perspective(400px) rotateY(0);
+	}
+    40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-in-out;
+	50% {
+		transform: perspective(400px) }
+    }
 }
 .h6lorem{
     font-size: 16px;
@@ -206,9 +228,15 @@ a {
     z-index: -1;
     width: 142px;
     height: 153px;
-    left: 650px;
-    top: 1300px;
+    left: 480px;
+    top: 1340px;
+    animation: loader 5s ease-in-out infinite;
 }
+@keyframes loader {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .ipsumnestedgrid{
     display: grid;
     box-sizing: border-box;
@@ -251,6 +279,7 @@ a {
     line-height: 32px;
     color: #FFFFFF;
     padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 .bloc1, .bloc2, .bloc3 {
     background: linear-gradient(180deg, #4D4F95 0%, #2B2D66 100%);
@@ -258,7 +287,9 @@ a {
     padding-bottom: 15px;
 }
 .txt{
+    margin-top: 10px;
     padding: 20px;
+    width: 80%;
 }
 
 /* ---------------------------------------------------------------------FOOTER------------------------------------------------------------------- */
