@@ -64,6 +64,19 @@ a {
     text-decoration-color: blue;
 }
 
+/* -------------------------------------------------------HAMBURGER MENU-------------------------------------------------------- */
+
+.hamburger {
+    display: none;
+}
+#toggle {
+    display: none;
+}
+
+
+
+/* -------------------------------------------------------HAMBURGER MENU-------------------------------------------------------- */
+
 /* ------------------------------------------------------------------------MAIN----------------------------------------------------------------- */
 .main .container {
     display: grid;
@@ -384,10 +397,11 @@ ________________________________________________________________________________
     padding-bottom: 30px;
 }
 .navbar{
-    display: flex;
+    display: none;
     align-items: center;
     margin-left: 30px;
-}
+    justify-content: end;
+}/* 
 .navbar a {
     color: #FFF;
     transition: ease;
@@ -399,7 +413,80 @@ ________________________________________________________________________________
     text-decoration: underline;
     text-decoration-color: blue;
 }
+ */
+.navbar a {
+    left: 100px;
+    display: none;
+    justify-content: end;
+}
+/* -------------------------------------------------------HAMBURGER MENU-------------------------------------------------------- */
+#toggle {
+    display: none;
+}
 
+#toggle:checked ~ .navbar {
+    right: 0;
+}
+
+#toggle:checked ~ .navbar a {
+    color: white;
+}
+
+.hamburger {
+    z-index: 9999;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    transition: 0.4s ease;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+}
+
+.hamburger span::before {
+    top: -7px;
+}
+
+.hamburger span::after {
+    bottom: -7px;
+    width: 29px;
+}
+
+#toggle:checked ~ .hamburger span {
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+#toggle:checked ~ .hamburger span::before {
+    transform: rotate(90deg);
+    background-color: white;
+    top: 0;
+    width: 32px;
+}
+
+#toggle:checked ~ .hamburger span::after {
+    display: none;
+}
+/* -------------------------------------------------------HAMBURGER MENU-------------------------------------------------------- */
 /* ------------------------------------------------------------------------MAIN----------------------------------------------------------------- */
 .main .container {
     display: flex;
